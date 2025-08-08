@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO</title>
+    <!-- css -->
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- icon -->
+    <link rel="icon" href="https://f-droid.org/repo/org.secuso.privacyfriendlytodolist/en-US/icon_muCAiEnC-seBQpNk-apzYHYW9pgIECNn46gYuorR2ZM=.png" type="image/gif" sizes="16x16">
+  <script type="module" crossorigin src="./assets/index-addd49cf.js"></script>
+  <link rel="stylesheet" href="./assets/index-ebc1a685.css">
+</head>
+<body class="bg-gray-900 text-white min-h-screen p-8">
+    <div class="max-w-3xl mx-auto">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold">Toso List</h1>
+            <p class="text-gray-400 mt-2" id="taskCounter">Stay organized and focused. You have 0 pending tasks.</p>
+        </header>
+
+        <main class="bg-gray-800 rounded-lg p-6 shadow-xl">
+            <form id="todoForm" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                <div class="md:col-span-1">
+                    <label class="block text-sm mb-2">New Task</label>
+                    <input type="text" id="todoInput" placeholder="e.g. Finish the project report" 
+                           class="w-full bg-gray-700 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="md:col-span-1">
+                    <label class="block text-sm mb-2">Due Date</label>
+                    <input type="date" id="todoDate" 
+                           class="w-full bg-gray-700 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="md:col-span-1 flex items-end">
+                    <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 rounded py-2 px-4">
+                        Add Task
+                    </button>
+                </div>
+            </form>
+
+            <div class="mt-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-semibold">Your List</h2>
+                    <div class="flex gap-4">
+                        <div class="flex gap-2">
+                            <button class="filter-btn active px-3 py-1 rounded" data-filter="all">All</button>
+                            <button class="filter-btn px-3 py-1 rounded" data-filter="pending">Pending</button>
+                            <button class="filter-btn px-3 py-1 rounded" data-filter="completed">Completed</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="todoList" class="space-y-2">
+                    <!-- Tasks will be inserted here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    
+</body>
+</html>

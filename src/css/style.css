@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.filter-btn {
+    background-color: #374151; /* bg-gray-700 */
+    color: #d1d5db; /* text-gray-300 */
+    transition-property: background-color;
+    transition-duration: 150ms; /* transition-colors */
+}
+.filter-btn:hover {
+    background-color: #4b5563; /* hover:bg-gray-600 */
+}
+
+.filter-btn.active {
+    background-color: #3b82f6; /* bg-blue-500 */
+    color: #ffffff; /* text-white */
+}
+
+.todo-item {
+    background-color: #374151; /* bg-gray-700 */
+    border-radius: 0.5rem; /* rounded-lg */
+    padding: 1rem; /* p-4 */
+    display: flex; /* flex */
+    align-items: center; /* items-center */
+    justify-content: space-between; /* justify-between */
+    gap: 1rem; /* gap-4 */
+}
+
+.todo-item.completed {
+    opacity: 0.6;
+}
+
+.todo-item .todo-text {
+    flex: 1 1 0%;
+}
+
+.todo-item.completed .todo-text {
+    text-decoration: line-through;
+}
+
+.todo-item .date {
+    font-size: 0.875rem; /* text-sm */
+    color: #9ca3af; /* text-gray-400 */
+}
+.todo-checkbox {
+    width: 1.25rem; /* w-5 */
+    height: 1.25rem; /* h-5 */
+    border-radius: 0.25rem; /* rounded */
+}
+
+.delete-btn {
+    color: #f87171; /* text-red-400 */
+    cursor: pointer;
+}
+.delete-btn:hover {
+    color: #fca5a5; /* hover:text-red-300 */
+}
+
+.delete-btn {
+    color: #f87171; /* text-red-400 */
+    cursor: pointer;
+}
+.delete-btn:hover {
+    color: #fca5a5; /* hover:text-red-300 */
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
